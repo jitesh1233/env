@@ -11,7 +11,7 @@ parameters {
         stage('Initialization') {
             steps {
                 echo "${DEPLOY_TO}"
-               echo "file parameter: $(param.file)"
+               echo "file parameter: ${param.file}"
             }
         }
     }
