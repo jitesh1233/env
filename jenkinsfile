@@ -1,5 +1,8 @@
 pipeline {
     agent any
+parameters {
+  file ''
+}
  environment { 
         DEPLOY_TO = 'production'
     }
@@ -8,6 +11,7 @@ pipeline {
         stage('Initialization') {
             steps {
                 echo "${DEPLOY_TO}"
+               echo "file parameter: $(param.file)"
             }
         }
     }
